@@ -1,5 +1,6 @@
 import 'dart:convert';
 import '../../../domain/entities/router.dart';
+import '../../http/http_error.dart';
 
 class VenverRemoteAccountModel {
   final String accessToken;
@@ -13,6 +14,9 @@ class VenverRemoteAccountModel {
   }
 
   factory VenverRemoteAccountModel.fromMap(Map<String, dynamic> map) {
+    if(!map.containsKey("accessToken")) {
+      throw HttpError.invalidData;
+    }
     return VenverRemoteAccountModel(
       map['accessToken'],
     );

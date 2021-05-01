@@ -17,11 +17,34 @@
             "program": "nicollas/main.dart"
         },
         {
+            "name": "Run all Tests Matheus",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/matheus"
+        },
+        {
+            "name": "Run all Tests Nicollas",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/nicollas"
+        },
+        {
             "name": "Launch Chrome",
             "request": "launch",
             "type": "pwa-chrome",
             "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+        },
+        {
+            "name": "Flutter for web",
+            "type": "dart",
+            "request": "launch",
+            "program": "matheus/main.dart",
+            "args": [
+                "-d",
+                "chrome",
+                "--release",
+            ]
         }
     ]
 }
